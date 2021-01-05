@@ -10,12 +10,12 @@ export default class ContextDisplay extends Component {
         const outputArr = []
     
         for(const [key, value] of Object.entries(localeObj)){
-            outputArr.push(`${key}: ${value}`)
+            if (key !== 'setLocale') outputArr.push(`${key}: ${value}`)
         }
     
         return (
             <ul>
-                {outputArr.map(text => <li>{text}</li>)}         
+                {outputArr.map(text => <li key={text}>{text}</li>)}         
             </ul>
         )
     }

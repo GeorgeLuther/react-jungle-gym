@@ -7,7 +7,7 @@ export default function ContextChild() {
     const inputs = inputArr.map(val => <ContextGrandInput name={val} key={val} placeholder={val}/>)
     return (
         <div>
-            <h1>This input form uses context for state management</h1>
+            <h2>This input form uses context for state management</h2>
             <form>
                 {inputs}
                 <button>Submit</button>

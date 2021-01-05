@@ -7,12 +7,12 @@ export default function propsChild(props) {
     const outputArr = []
 
     for(const [key, value] of Object.entries(props.stateVal)){
-        outputArr.push(`${key}: ${value}`)
+        if (key !== 'setLocale') outputArr.push(`${key}: ${value}`)
     }
 
     return (
         <div>
-            <h1>This input form uses props for state management</h1>
+            <h2>This input form uses props for state management</h2>
             <form>
                 {inputs}
                 <button>Submit</button>
